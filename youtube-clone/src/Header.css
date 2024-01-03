@@ -1,0 +1,55 @@
+.header{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.header__logo{
+    height: 25px;
+    object-fit: contain;
+    margin-left: 20px;
+}
+
+.header__input{
+    display: flex;
+    align-items: center;
+    width: 50%;
+    height: 40px;
+    border-radius: 25px 25px;
+    border: 1px solid black;
+}
+.header__input > input{
+    flex:1;
+    height: 20px;
+    border: none;
+    /* border-radius: 20px 20px; */
+    padding-left: 20px;
+    
+
+}
+
+.header__inputButton{
+    width:50px !important;
+    background-color: aliceblue;
+    border-left: 1px solid lightgray;
+    color: grey;
+    /* border-radius: 20px; */
+    margin-right: 5px;
+    
+}
+
+.header__mic{
+    display: flex;
+    align-items: center;
+    background-color: aliceblue;
+    border-radius: 20px 20px;
+}
+
+.header__icons{
+    display: flex;
+    align-items: center;
+}
+.header__icon{
+    margin-right: 5px; 
+}
