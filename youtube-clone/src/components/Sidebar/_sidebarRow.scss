@@ -1,3 +1,5 @@
+@import "../../base.scss";
+
 .sidebarRow{
     display: flex;
     align-items: center;
@@ -44,3 +46,19 @@
 .sidebarRow.selected > .sidebarRow__title{
     font-weight: bold;
 }
+
+
+@media (max-width: $breakpoint-medium ){
+    .sidebarRow__title{
+        display: none;
+     }
+    
+  }
+
+@media (max-width: $breakpoint-small ){
+  
+    .sidebarRow__title{
+       display: none;
+    }
+  }
+ 

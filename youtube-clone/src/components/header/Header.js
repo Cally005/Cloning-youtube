@@ -1,5 +1,5 @@
 import React from 'react';
-import './Header.css';
+import './_header.scss';
 import VideoCallIcon  from '@mui/icons-material/VideoCall';
 import SearchIcon from '@mui/icons-material/Search';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -9,11 +9,16 @@ import MicIcon from '@mui/icons-material/Mic';
 import { Avatar } from '@mui/material';
 
 
-function Header() {
+const Header = ({handleToggleSidebar}) => {
+
+
   return (
     <div className='header'>
         <div className="header__left">
-        <MenuIcon />
+        <MenuIcon  className="header__menu" 
+        size={26}
+        onClick={() => handleToggleSidebar ()}
+         />
         <img 
         className='header__logo'
         src='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Logo_of_YouTube_%282015-2017%29.svg/502px-Logo_of_YouTube_%282015-2017%29.svg.png?20200109235614' 
@@ -21,9 +26,12 @@ function Header() {
         </div> 
 
         <div className='header__input'>
+        <form>
         <input placeholder="Search" type="text"/>
-        <SearchIcon className='header__inputButton' />
-        
+        <button type='submit'>
+        <SearchIcon className='header__inputButton' size={22} />
+        </button>
+        </form>
         </div>
         
        
@@ -32,8 +40,8 @@ function Header() {
        
         <VideoCallIcon className="header__icon" />
         <AppIcon className="header__icon" />
-        <NotificationsIcon className="header__icon"/>
-        <Avatar 
+        <NotificationsIcon className="header__icon" size={28}/>
+        <Avatar className='header__icon-1'
           alt='cally'
           src="https://appclick.ng/portal/uploads/student_images/123.jpg?1704035821?1704035821"
           />
